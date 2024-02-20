@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home_bnb"
+        android:title="Home"
+        android:icon="@drawable/ic_vector_home_24"
+        />
+
+    <item
+        android:id="@+id/map_bnb"
+        android:title="Map"
+        android:icon="@drawable/ic_vector_map_24"
+        />
+
+    <item
+        android:id="@+id/settings_bnb"
+        android:title="Setting"
+        android:icon="@drawable/ic_vector_setting_24"
+        />
+
+    <item
+        android:id="@+id/user_bnb"
+        android:title="Profile"
+        android:icon="@drawable/ic_vector_user_24"
+        />
+
+</menu>

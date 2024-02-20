@@ -1,0 +1,266 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homefinal"
+    tools:context=".HomeActivity"
+    tools:ignore="ExtraText">
+
+    <!-- Container for Fragments -->
+
+    <!-- Top Toolbar Icon -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="153dp"
+        android:layout_height="153dp"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.138"
+        tools:ignore="MissingConstraints" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="NotSibling" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/tool_bar_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:background="@drawable/circular_bg_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_vector_menu_24" />
+
+
+    <!-- Where to Go TextView -->
+
+    <!-- Grey box with TextView and icon -->
+    <LinearLayout
+        android:id="@+id/saved_places_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:background="@color/light_gray"
+        app:layout_constraintTop_toBottomOf="@id/where_to_go_tv">
+
+        <!-- Ensure this matches the background color of LinearLayout -->
+
+        <TextView
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_vector_savedplaced_24"
+            android:drawablePadding="@dimen/dp_10"
+            android:padding="@dimen/dp_20dp"
+            android:paddingStart="20dp"
+            android:text="Saved Places"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!-- Suggestions Title -->
+
+    <!-- Suggestion Images Container -->
+
+    <!-- Suggestion Images Container -->
+
+    <!-- Where to Go EditText -->
+
+    <TextView
+        android:id="@+id/suggestions_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Suggestions"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saved_places_layout" />
+
+    <LinearLayout
+        android:id="@+id/suggestion_images_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/suggestions_title"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- Ride Box -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/suggestion_image_1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/rounded_box_gray"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/ridefinal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:text="Ride"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Rental Box -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/suggestion_image_2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/rounded_box_gray"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/rentfinal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:text="Rental"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Reserve Box -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/suggestion_image_3"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/rounded_box_gray"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/ic_vector_new_reserve_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:text="Reserve"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Existing code above -->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/advertisement_container"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:paddingStart="@dimen/dp_20"-->
+<!--        android:paddingEnd="@dimen/dp_20"-->
+<!--        android:paddingTop="@dimen/dp_20"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/suggestion_images_container"-->
+<!--        app:layout_constraintVertical_bias="0.0">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/advertisement_image"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/adv_carousel"-->
+<!--            android:scaleType="fitXY" />-->
+
+<!--    </LinearLayout>-->
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/where_to_go_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_edittext_bg"
+        android:drawableStart="@drawable/ic_vector_search_24"
+        android:drawableEnd="@drawable/ic_vector_mic_24"
+        android:drawablePadding="@dimen/dp_10"
+        android:hint="Where to go?"
+        android:minHeight="@dimen/dp_50"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_20"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tool_bar_ic"
+        tools:ignore="MissingConstraints" />
+
+    <com.codebyashish.autoimageslider.AutoImageSlider
+        android:id="@+id/autoImageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="@dimen/dp_20dp"
+        app:ais_auto_sliding="true"
+        app:ais_corner_radius="50"
+        app:ais_indicator_align="@string/center"
+        app:ais_placeholder="@drawable/placeholder_default_loading"
+        app:ais_time_interval="2000"
+        app:ais_title_background="@drawable/text_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <!-- Existing code below -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

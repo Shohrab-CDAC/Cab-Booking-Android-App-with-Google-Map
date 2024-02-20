@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Cab O Cab</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_full_name">Enter full name</string>
+    <string name="email">Email</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="create_your_password">Create Your Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="terms_privacy">By clicking you agree to our Terms of Service and Privacy Policy</string>
+    <string name="support">In case you are unable to complete the verification process, please contact our support team at
+cbc.support@dtc.gov.ae</string>
+    <string name="my_API_key">AIzaSyAD_7SPE6zNCGDksLlq014ZHbjq_qInxng</string>
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string name="login">Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

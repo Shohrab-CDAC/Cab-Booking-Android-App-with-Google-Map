@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Enable support action bar -->
+        <item name="windowActionBar">true</item>
+        <item name="windowActionBarOverlay">true</item> <!-- Make the action bar overlay content -->
+        <!-- Set action bar background color to transparent -->
+        <item name="android:background">@android:color/transparent</item>
+        <!-- Other style attributes -->
+    </style>
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <!-- Hint color -->
+        <item name="android:textColorHint">@color/hint_color</item>
+
+    </style>
+
+    <style name="TextInputEditText" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <!-- Text size -->
+        <item name="android:textSize">14sp</item>
+        <!-- Max lines -->
+        <item name="android:maxLines">1</item>
+    </style>
+
+</resources>

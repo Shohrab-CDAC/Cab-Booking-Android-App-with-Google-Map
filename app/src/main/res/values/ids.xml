@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="advertisement_item" type="id"/>
+    <item name="nav_host_fragment" type="id"/>
+    <item name="settingsFragment" type="id"/>
+    <item name="userFragment" type="id"/>
+</resources>

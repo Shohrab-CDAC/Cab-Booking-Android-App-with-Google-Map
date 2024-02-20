@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/tool_bar_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_40"
+        android:background="@drawable/circular_bg_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_vector_arrow_back" />
+
+    <!-- Rounded Corner Gray Box -->
+    <RelativeLayout
+        android:id="@+id/grayBox"
+        android:layout_marginTop="@dimen/dp_110"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_box_gray"
+        android:padding="@dimen/dp_8">
+
+        <!-- Green light -->
+        <ImageView
+            android:id="@+id/greenLight"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/green_circle_icon"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_8"/>
+
+        <!-- Source EditText -->
+        <RelativeLayout
+            android:id="@+id/sourceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/greenLight"
+            android:layout_marginStart="@dimen/dp_8">
+
+            <!-- Source EditText -->
+            <EditText
+                android:id="@+id/sourceEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext_bg"
+                android:drawableStart="@drawable/ic_vector_location_24"
+                android:drawablePadding="@dimen/dp_10"
+                android:hint="Source"
+                android:padding="8dp"
+                android:textColorHint="@color/dark_gray"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </RelativeLayout>
+
+        <!-- Dotted line -->
+        <View
+            android:id="@+id/dottedLine"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_below="@id/sourceLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:background="@drawable/dotted_line"/>
+
+        <!-- Red light -->
+        <ImageView
+            android:id="@+id/redLight"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_below="@id/dottedLine"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/red_circle_icon" />
+
+        <RelativeLayout
+            android:id="@+id/destinationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dottedLine"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_toEndOf="@id/redLight"
+            android:layout_marginStart="@dimen/dp_8">
+
+            <!-- Destination EditText -->
+            <EditText
+                android:id="@+id/destinationEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext_bg"
+                android:drawableStart="@drawable/ic_vector_search_24"
+                android:drawableEnd="@drawable/ic_vector_mic_24"
+                android:drawablePadding="@dimen/dp_10"
+                android:hint="Destination"
+                android:padding="8dp"
+                android:textColorHint="@color/dark_gray"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- Dotted line between Green and Red light -->
+
+    <!-- Saved Places List -->
+    <RelativeLayout
+        android:id="@+id/savedPlacesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grayBox"
+        android:layout_marginTop="@dimen/dp_8">
+
+        <!-- Saved Places Title -->
+        <TextView
+            android:id="@+id/savedPlacesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved Places"
+            android:textSize="16sp"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:drawableLeft="@drawable/ic_vector_saved_loc_24"
+            android:drawablePadding="@dimen/dp_8"/>
+
+        <!-- Saved Places List Items -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/savedPlacesTitle"
+            android:layout_marginTop="0dp">
+
+            <!-- Set location on map -->
+            <TextView
+                android:id="@+id/setLocationOnMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set location on map"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/ic_vector_location_map_24"
+                android:drawablePadding="@dimen/dp_8"
+                android:paddingStart="@dimen/dp_8"
+                android:paddingEnd="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"/>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#208B8686"
+            android:layout_below="@id/setLocationOnMap"/>
+
+            <!-- Metro Station Botanical Garden -->
+            <TextView
+                android:id="@+id/metroStationBotanicalGarden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Metro Station Botanical Garden,Sector - 52, Noida"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/ic_vector_location_on_24"
+                android:drawablePadding="@dimen/dp_8"
+                android:paddingStart="@dimen/dp_8"
+                android:paddingEnd="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:layout_below="@id/setLocationOnMap"/>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/metroStationBotanicalGarden"
+                android:background="#208B8686"/>
+            <!-- 52 Metro Station -->
+            <TextView
+                android:id="@+id/fiftyTwoMetroStation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="52 Metro Station"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/ic_vector_location_on_24"
+                android:drawablePadding="@dimen/dp_8"
+                android:paddingStart="@dimen/dp_8"
+                android:paddingEnd="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:layout_below="@id/metroStationBotanicalGarden"/>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/fiftyTwoMetroStation"
+                android:background="#208B8686"/>
+
+            <!-- Sector - 52, Noida -->
+            <TextView
+                android:id="@+id/sectorFiftyTwoNoida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sector - 52, Noida"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/ic_vector_location_on_24"
+                android:drawablePadding="@dimen/dp_8"
+                android:paddingStart="@dimen/dp_8"
+                android:paddingEnd="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:layout_below="@id/fiftyTwoMetroStation"/>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/sectorFiftyTwoNoida"
+                android:background="#208B8686"/>
+
+            <!-- Gulshan Bellina -->
+            <TextView
+                android:id="@+id/gulshanBellina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gulshan Bellina,Panchsheel, Greater Noida, Sector - 16"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/ic_vector_location_on_24"
+                android:drawablePadding="@dimen/dp_8"
+                android:paddingStart="@dimen/dp_8"
+                android:paddingEnd="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:layout_below="@id/sectorFiftyTwoNoida"/>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/gulshanBellina"
+                android:background="#208B8686"/>
+
+            <!-- Panchsheel, Greater Noida, Sector - 16 -->
+
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/gulshanBellina"
+                android:background="#208B8686"/>
+
+            <!-- Add a new place -->
+            <TextView
+                android:id="@+id/addNewPlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add a new place"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/ic_vector_add_circle_24"
+                android:drawablePadding="@dimen/dp_8"
+                android:paddingStart="@dimen/dp_8"
+                android:paddingEnd="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:layout_below="@id/gulshanBellina"
+                tools:ignore="UnknownId" />
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
